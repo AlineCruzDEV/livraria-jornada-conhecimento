@@ -1,8 +1,10 @@
 package dao;
 
-public interface GenericProductDao {
-    void adicionar();
-    void ver();
-    void alterar();
-    void remover();
+import java.util.List;
+
+public interface GenericProductDao<T> {
+    void adicionar(T product);
+    List<T> verTodos();
+    void alterar(T product);
+    void removerProduto(Long id);
 }
