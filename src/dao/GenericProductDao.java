@@ -1,6 +1,6 @@
-package model;
+package dao;
 
-public interface GenericDAO {
+public interface GenericProductDao {
     void adicionar();
     void ver();
     void alterar();

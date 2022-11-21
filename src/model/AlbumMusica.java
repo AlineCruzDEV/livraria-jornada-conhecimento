@@ -3,9 +3,9 @@ package model;
 import java.util.List;
 
 public class AlbumMusica extends Produto {
-    List<String> artistas;
-    List<String> generos;
-    List<String> selos;
+    private List<String> artistas;
+    private List<String> generos;
+    private List<String> selos;
 
     public AlbumMusica(Long id, String nome, Double preco, List<String> artistas, List<String> generos, List<String> selos) {
         super(id, nome, preco);

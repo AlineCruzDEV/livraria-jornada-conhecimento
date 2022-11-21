@@ -3,9 +3,9 @@ package model;
 import java.util.List;
 
 public class Livro extends Produto {
-    List<String> generos;
-    String escritor;
-    String editora;
+    private List<String> generos;
+    private String escritor;
+    private String editora;
 
     public Livro(Long id, String nome, Double preco) {
         super(id, nome, preco);

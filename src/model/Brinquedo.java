@@ -1,7 +1,7 @@
 package model;
 
 public class Brinquedo extends Produto {
-    String tipo;
+    private String tipo;
 
     public Brinquedo(Long id, String nome, Double preco) {
         super(id, nome, preco);

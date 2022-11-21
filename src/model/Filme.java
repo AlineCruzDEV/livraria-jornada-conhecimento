@@ -3,10 +3,10 @@ package model;
 import java.util.List;
 
 public class Filme extends Produto {
-    List<String> diretores;
-    List<String> generos;
-    List<String> produtores;
-    String estudio;
+    private List<String> diretores;
+    private List<String> generos;
+    private List<String> produtores;
+    private String estudio;
 
     public Filme(Long id, String nome, Double preco) {
         super(id, nome, preco);
