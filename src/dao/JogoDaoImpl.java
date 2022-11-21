@@ -2,5 +2,5 @@ package dao;
 
 import model.Jogo;
 
-public class JogoDaoImpl extends AbstractGenericProductDao<Jogo> {
+public class JogoDaoImpl extends AbstractGenericProductDao<Jogo> implements JogoDao{
 }
