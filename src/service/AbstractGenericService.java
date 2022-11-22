@@ -18,7 +18,7 @@ public abstract class AbstractGenericService<T> implements GenericService<T> {
     }
 
     @Override
-    public List<T> verTodos() {
+    public List<T> verItem() {
         return dao.verItem();
     }
 
