@@ -9,7 +9,7 @@ public abstract class AbstractGenericProductDao<T> implements GenericProductDao<
     }
 
     @Override
-    public List<T> verTodos() {
+    public List<T> verItem() {
         return null;
     }
 
