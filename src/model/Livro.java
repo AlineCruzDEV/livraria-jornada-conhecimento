@@ -7,8 +7,8 @@ public class Livro extends Produto {
     private String escritor;
     private String editora;
 
-    public Livro(Long id, String nome, Double preco) {
-        super(id, nome, preco);
+    public Livro(Long id, String nome, Double preco, TipoProduto tipoProduto) {
+        super(id, nome, preco, tipoProduto);
     }
 
     public List<String> getGeneros() {

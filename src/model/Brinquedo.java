@@ -3,8 +3,8 @@ package model;
 public class Brinquedo extends Produto {
     private String tipo;
 
-    public Brinquedo(Long id, String nome, Double preco) {
-        super(id, nome, preco);
+    public Brinquedo(Long id, String nome, Double preco, TipoProduto tipoProduto) {
+        super(id, nome, preco, tipoProduto);
     }
 
     public String getTipo() {

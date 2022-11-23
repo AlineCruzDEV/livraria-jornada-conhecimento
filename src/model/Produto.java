@@ -5,10 +5,13 @@ public abstract class Produto {
     private String nome;
     private Double preco;
 
-    public Produto(Long id, String nome, Double preco) {
+    private final TipoProduto tipoProduto;
+
+    public Produto(Long id, String nome, Double preco, TipoProduto tipoProduto) {
         this.id = id;
         this.nome = nome;
         this.preco = preco;
+        this.tipoProduto = tipoProduto;
     }
 
     public Long getId() {

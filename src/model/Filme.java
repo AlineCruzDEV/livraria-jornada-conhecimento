@@ -8,8 +8,8 @@ public class Filme extends Produto {
     private List<String> produtores;
     private String estudio;
 
-    public Filme(Long id, String nome, Double preco) {
-        super(id, nome, preco);
+    public Filme(Long id, String nome, Double preco, TipoProduto tipoProduto) {
+        super(id, nome, preco, tipoProduto);
     }
 
     public List<String> getDiretores() {

@@ -4,7 +4,8 @@ import java.util.List;
 
 public interface GenericProductDao<T> {
     void adicionar(T product);
-    List<T> verItem();
+    T verItem();
+    List<T> listaItens();
     void alterar(T product);
     void removerProduto(Long id);
 }
