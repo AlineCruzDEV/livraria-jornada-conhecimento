@@ -8,7 +8,8 @@ public class LivrariaController implements Compra {
 
     @Override
     public void comprarMercadoria(Produto produto, Caixa caixa, EstoqueService estoque) {
-        estoque.removerMercadoria(produto);
+        System.out.println("Realizando compra de " + produto.getTipoProduto() + " - " + produto.getNome() + " no valor de: " + produto.getPreco());
+        estoque.removerProduto(produto);
         caixa.setSaldo(caixa.getSaldo() + produto.getPreco());
     }
 }
