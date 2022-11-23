@@ -7,8 +7,11 @@ public class AlbumMusica extends Produto {
     private List<String> generos;
     private List<String> selos;
 
-    public AlbumMusica(Long id, String nome, Double preco, TipoProduto tipoProduto) {
+    public AlbumMusica(Long id, String nome, Double preco, TipoProduto tipoProduto, List<String> artistas, List<String> generos, List<String> selos) {
         super(id, nome, preco, tipoProduto);
+        this.artistas = artistas;
+        this.generos = generos;
+        this.selos = selos;
     }
 
     public List<String> getArtistas() {

@@ -8,8 +8,12 @@ public class Filme extends Produto {
     private List<String> produtores;
     private String estudio;
 
-    public Filme(Long id, String nome, Double preco, TipoProduto tipoProduto) {
+    public Filme(Long id, String nome, Double preco, TipoProduto tipoProduto, List<String> diretores, List<String> generos, List<String> produtores, String estudio) {
         super(id, nome, preco, tipoProduto);
+        this.diretores = diretores;
+        this.generos = generos;
+        this.produtores = produtores;
+        this.estudio = estudio;
     }
 
     public List<String> getDiretores() {

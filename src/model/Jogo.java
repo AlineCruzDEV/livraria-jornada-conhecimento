@@ -7,8 +7,11 @@ public class Jogo extends Produto {
     private String distribuidora;
     private String estudio;
 
-    public Jogo(Long id, String nome, Double preco, TipoProduto tipoProduto) {
+    public Jogo(Long id, String nome, Double preco, TipoProduto tipoProduto, List<String> generos, String distribuidora, String estudio) {
         super(id, nome, preco, tipoProduto);
+        this.generos = generos;
+        this.distribuidora = distribuidora;
+        this.estudio = estudio;
     }
 
     public List<String> getGeneros() {

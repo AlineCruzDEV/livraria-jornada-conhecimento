@@ -5,7 +5,7 @@ public abstract class Produto {
     private String nome;
     private Double preco;
 
-    private final TipoProduto tipoProduto;
+    private TipoProduto tipoProduto;
 
     public Produto(Long id, String nome, Double preco, TipoProduto tipoProduto) {
         this.id = id;
@@ -36,6 +36,10 @@ public abstract class Produto {
 
     public void setPreco(Double preco) {
         this.preco = preco;
+    }
+
+    public TipoProduto getTipoProduto() {
+        return tipoProduto;
     }
 }
 

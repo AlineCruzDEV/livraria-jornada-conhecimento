@@ -7,8 +7,11 @@ public class Livro extends Produto {
     private String escritor;
     private String editora;
 
-    public Livro(Long id, String nome, Double preco, TipoProduto tipoProduto) {
+    public Livro(Long id, String nome, Double preco, TipoProduto tipoProduto, List<String> generos, String escritor, String editora) {
         super(id, nome, preco, tipoProduto);
+        this.generos = generos;
+        this.escritor = escritor;
+        this.editora = editora;
     }
 
     public List<String> getGeneros() {
