@@ -1,41 +1,52 @@
 package service;
 
+import dao.EstoqueDao;
+import dao.EstoqueDaoImpl;
 import model.Produto;
 import model.TipoProduto;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
 public class EstoqueServiceImpl implements EstoqueService {
-    GenericService<Produto> service;
+    EstoqueDao dao;
 
-    @Override
-    public void adicionarMercadoria(Produto produto) {
-        service.adicionar(produto);
+    public EstoqueServiceImpl() {
+        dao = new EstoqueDaoImpl();
     }
 
     @Override
-    public void removerMercadoria(Produto product) {
-        service.removerProduto(product.getId());
+    public void adicionarProduto(Produto produto) {
+        dao.adicionarProduto(produto);
+    }
+
+    @Override
+    public void removerProduto(Produto product) {
+        dao.removerProduto(product);
+    }
+
+    @Override
+    public void verProduto(Long id) {
+        dao.verProduto(id);
+    }
+
+    @Override
+    public void alterarProduto(Long id) {
+        dao.alterarProduto(id);
     }
 
     @Override
     public Integer quantidadeItensPorTipo(TipoProduto tipo) {
-        //de acordo com o tipo chama o service apropriado e quantos item retorna na lista de itens
-        return service.listaItens().size();
+        return dao.quantidadeItensPorTipo(tipo);
     }
 
     @Override
     public List<Produto> listagemEstoqueCompleto() {
-        //concatena a lista retornada de cada service e retorna
-        List<Produto> listaCompleta = new ArrayList<>();
-        return listaCompleta;
+        return dao.listagemEstoqueCompleto();
     }
 
     @Override
     public Map<TipoProduto, Integer> estoqueCompletoQuantidadePorCategoria() {
-        //montar a saída como um map onde envia o tipo com a quantidade total de itens que cada service retornar
-        return null;
+        return dao.estoqueCompletoQuantidadePorCategoria();
     }
 }
