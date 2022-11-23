@@ -6,14 +6,13 @@ import service.EstoqueService;
 import service.EstoqueServiceImpl;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
         Caixa caixa = new Caixa(0d);
         LivrariaController livraria = new LivrariaController();
 
-        ArrayList<String> generos = new ArrayList<String>();
+        ArrayList<String> generos = new ArrayList<>();
         generos.add("Tecnologia");
         generos.add("Programação");
         Livro livro1 = new Livro(1L, "Codificador Limpo", 150.0, TipoProduto.LIVRO, generos, "Uncle Bob", "Alta Books");
@@ -36,7 +35,7 @@ public class Main {
         System.out.println();
         System.out.println("=====================");
         livraria.comprarMercadoria(livro1, caixa, estoque);
-        System.out.println("Caixa apos compra: " + caixa.getSaldo());
+        System.out.println("Caixa após venda: " + caixa.getSaldo());
 
 
     }
